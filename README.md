@@ -33,7 +33,7 @@ Unified_Mentor_Internship/
 ## 🔧 Setup Instructions
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/Unified_Mentor_Internship.git
+git clone https://github.com/HumayunK01/Unified_Mentor_Internship.git
 ```
 
 2. Navigate to the project directory

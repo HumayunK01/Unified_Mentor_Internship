@@ -41,8 +41,6 @@ git clone https://github.com/HumayunK01/Unified_Mentor_Internship.git
 cd Unified_Mentor_Internship
 ```
 
-3. [Additional setup steps specific to your projects]
-
 ## 📝 Project Documentation
 Each project contains its own README file with specific setup instructions, features, and usage guidelines.
 

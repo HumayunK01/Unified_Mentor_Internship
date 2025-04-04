@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout Playground</title>
+  <style>
+    /* Universal Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
+    }
+
+    aside {
+      width: 200px;
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-right: 1px solid #ddd;
+    }
+
+    main {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    /* Example Styling Inside Layout */
+    .box, .container {
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #e9f5ff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #0077cc;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CSS Layout + Selectors Demo</h1>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h2>Sidebar</h2>
+      <p>Navigation or Info here</p>
+    </aside>
+
+    <main>
+      <h2>Main Content</h2>
+      <p>This is your main content area where all the selector examples go!</p>
+
+      <div class="box">
+        <p class="highlight">This is a highlighted paragraph (class selector).</p>
+        <p id="special">This is a special paragraph (ID selector).</p>
+      </div>
+
+      <div class="container">
+        <p>Direct child of container (child selector).</p>
+        <span><p>Nested child of container (not matched).</p></span>
+      </div>
+
+      <ul>
+        <li>First item (first-child)</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ul>
+
+      <input type="text" placeholder="Text input">
+      <input type="email" placeholder="Email input">
+
+      <br>
+      <button>Hover me</button>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CSS Layout Playground</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Playground</title>
+  <style>
+    /* Universal Selector */
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Element Selector */
+    h1 {
+      color: darkblue;
+      text-align: center;
+    }
+
+    /* Class Selector */
+    .highlight {
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    /* ID Selector */
+    #special {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Group Selector */
+    h2, h3 {
+      color: teal;
+    }
+
+    /* Descendant Selector */
+    .box p {
+      color: darkgreen;
+    }
+
+    /* Child Selector */
+    .container > p {
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Adjacent Sibling Selector */
+    h2 + p {
+      font-style: italic;
+    }
+
+    /* General Sibling Selector */
+    h3 ~ p {
+      color: purple;
+    }
+
+    /* Attribute Selector */
+    input[type="text"] {
+      border: 2px solid orange;
+      padding: 5px;
+    }
+
+    /* Pseudo-class */
+    button:hover {
+      background-color: lightgreen;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Selectors Demo</h1>
+
+  <h2>Heading 2</h2>
+  <p>This paragraph is next to h2 (adjacent sibling).</p>
+  <p>Another paragraph (general sibling).</p>
+
+  <h3>Heading 3</h3>
+  <p>Paragraph after h3 (general sibling selector).</p>
+
+  <div class="box">
+    <p>This paragraph is inside a box (descendant selector).</p>
+  </div>
+
+  <div class="container">
+    <p>Direct child of container (child selector).</p>
+    <span><p>Nested child of container (not matched).</p></span>
+  </div>
+
+  <p class="highlight">This paragraph has a class.</p>
+  <p id="special">This paragraph has an ID.</p>
+
+  <ul>
+    <li>First item (first-child)</li>
+    <li>Second item</li>
+    <li>Third item</li>
+    <li>Fourth item</li>
+  </ul>
+
+  <input type="text" placeholder="Attribute selector here">
+  <input type="email" placeholder="This one is not styled">
+
+  <br><br>
+  <button>Hover me</button>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functions, Scope, and Closures</title>
+</head>
+<body>
+
+  <h1>JavaScript Closures Demo</h1>
+  <button id="clickMe">Click Me</button>
+  <p id="countDisplay">Button clicked 0 times.</p>
+
+  <script>
+    // Closure Example
+    function clickCounter() {
+      let count = 0;  // 'count' is scoped to this function
+
+      // Return an inner function that "closes over" the 'count' variable
+      return function() {
+        count++;
+        document.getElementById('countDisplay').textContent = `Button clicked ${count} times.`;
+      };
+    }
+
+    const counter = clickCounter();  // counter now remembers 'count'
+
+    document.getElementById('clickMe').addEventListener('click', counter);
+  </script>
+
+</body>
+</html>

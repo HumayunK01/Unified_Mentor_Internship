@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Web Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f0f4f8;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #005fa3;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      background: #004080;
+    }
+
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Responsive design starts here! */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 20px;
+      }
+      nav a {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Web Design Demo</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="container">
+    <div class="card">
+      <h2>Card 1</h2>
+      <p>This is some example content for card 1. Resize the window to see how it adapts!</p>
+    </div>
+    <div class="card">
+      <h2>Card 2</h2>
+      <p>This is some example content for card 2. Layout changes on smaller screens.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Responsive Demo</p>
+  </footer>
+
+</body>
+</html>

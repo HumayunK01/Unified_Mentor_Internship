@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asynchronous JavaScript: Promises</title>
+</head>
+<body>
+
+  <h1>Fetch Data Simulation</h1>
+  <button id="loadData">Load Data</button>
+  <p id="output">No data loaded yet.</p>
+
+  <script>
+    // Simulate an async operation using a Promise
+    function fetchData() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = true; // Change to false to simulate an error
+          
+          if (success) {
+            resolve("Data fetched successfully! 🎯");
+          } else {
+            reject("Error fetching data. 🚫");
+          }
+        }, 2000); // 2 second delay
+      });
+    }
+
+    document.getElementById('loadData').addEventListener('click', () => {
+      document.getElementById('output').textContent = "Loading... ⏳";
+
+      fetchData()
+        .then(data => {
+          document.getElementById('output').textContent = data;
+        })
+        .catch(error => {
+          document.getElementById('output').textContent = error;
+        });
+    });
+  </script>
+
+</body>
+</html>
